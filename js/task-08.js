@@ -4,11 +4,11 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
     e.preventDefault();
-    const { elements: { login, password } } = e.currentTarget;
+    const { elements: { email, password } } = e.currentTarget;
 
-    if (login.value === "" || password.value === "") {
+    if (email.value === "" || password.value === "") {
         return alert("Все поля должны быть заполнены :)")
     }
-    console.log('Login: ${login.value},Password: ${password.value}');
+    console.log('Email: ${ email } , Password: ${password}');
     e.currentTarget.reset();
 }
