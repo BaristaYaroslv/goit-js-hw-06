@@ -7,8 +7,14 @@ function onFormSubmit(e) {
     const { elements: { email, password } } = e.currentTarget;
 
     if (email.value === "" || password.value === "") {
-        return alert("Все поля должны быть заполнены :)")
+        return alert("Bce поля должны быть заполнены :)")
     }
-    console.log('Email: ${ email } , Password: ${password}');
+    const formData = new FormData(e.currentTarget);
+    // formData.forEach((name,value) => {
+    //     console.log(`Email: ${email.value} , Password: ${password.value}`);
+    // })
+    for(let [name, value] of formData) {
+    console.log(`${name} = ${value}`); }
+    
     e.currentTarget.reset();
 }
