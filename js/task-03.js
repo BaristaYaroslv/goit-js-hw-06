@@ -20,4 +20,4 @@ const createImgEl = images.map(image => {
     "beforeend",
     `<li><img src=${image.url} alt='${image.alt}'width = 600 height = 350></li>`
   );
-})я
+})

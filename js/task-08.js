@@ -10,11 +10,10 @@ function onFormSubmit(e) {
         return alert("Bce поля должны быть заполнены :)")
     }
     const formData = new FormData(e.currentTarget);
-    // formData.forEach((name,value) => {
-    //     console.log(`Email: ${email.value} , Password: ${password.value}`);
-    // })
-    for(let [name, value] of formData) {
-    console.log(`${name} = ${value}`); }
+    console.log(`Email: ${email.value}
+Password: ${password.value}`);
+    // for(let [name, value] of formData) {
+    // console.log(`${name} = ${value}`); }
     
     e.currentTarget.reset();
 }
