@@ -14,10 +14,10 @@ const images = [
 ];
 // for(let el of images) document.querySelector('.gallery').insertAdjacentHTML('beforeEnd', `<li><img src="${el.url}" alt="${el.alt}"></li>`);
 
-const listEl = document.querySelector('.gallery');
-const createImgEl = images.map(image => {
-  let addEl = listEl.insertAdjacentHTML(
-    "beforeend",
-    `<li><img src=${image.url} alt='${image.alt}'width = 600 height = 350></li>`
-  );
-})
+const ulEl = document.querySelector('.gallery');
+
+const imagesEl = images.map(item => 
+ `<li class ='image-item' ><img src = "${item.url}" alt = "${item.alt}" width ="450" height ="300"
+  ></img></li>`);
+
+ ulEl.insertAdjacentHTML('afterbegin', imagesEl.join(""))

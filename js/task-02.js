@@ -6,15 +6,12 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const ingredientsList = document.querySelector("#ingredients");
-// ingredientsList.append(...ingredients.map((item) => {
-//     let itemList = document.createElement("li");
-//     itemList.textContent = item;
-//     return itemList;
-//   })
-// );
-for (let item of ingredients) {
- let itemList = document.createElement("li");
- itemList.textContent = item;
- ingredientsList.append(itemList);
-}
+let basket = document.getElementById("ingredients");
+const liArray = [];
+const foodIngredients = ingredients.forEach(ingredient => {
+  let items =  document.createElement("li");
+  items.className = 'item';
+  items.textContent=ingredient;
+  liArray.push(items);
+})
+basket.append(...liArray)
